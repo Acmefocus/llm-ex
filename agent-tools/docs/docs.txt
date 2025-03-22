@@ -1,0 +1,75 @@
+
+
+
++----------------+
+|   Tool Client  |
++----------------+
+        |
+        v
++----------------+   工具发现    +-----------------+
+|  Tool Gateway  |<----------->|  Tool Registry  |
++----------------+              +-----------------+
+        |
+        v
++----------------+   权限验证    +-----------------+
+| Auth Manager   |<----------->|  Permission DB  |
++----------------+              +-----------------+
+        |
+        v
++----------------+   参数验证    +-----------------+
+|   Validator    |<----------->|  Schema Config   |
++----------------+              +-----------------+
+        |
+        v
++----------------+   执行分发    +-----------------+
+|  Executor      |<----------->|  Async Workers  |
++----------------+              +-----------------+
+
+
+agent-tools/
+├── core/
+│   ├── __init__.py
+│   ├── registry.py      # 工具注册中心
+│   ├── decorators.py     # 装饰器定义
+│   ├── validator.py      # 参数验证
+│   ├── security.py       # 权限控制
+│   ├── cache.py          # 缓存管理
+│   └── docs.py           # 文档生成
+├── utils/
+│   ├── logger.py         # 日志记录
+│   └── async_utils.py    # 异步处理
+├── examples/             # 示例工具
+│   ├── api_tools.py
+│   ├── data_tools.py
+│   └── service_tools.py
+├── tests/                # 单元测试
+├── docs/                 # 文档
+└── config.py             # 配置管理
+
+
+
+# agent_framework/
+# ├── __init__.py
+# ├── core/
+# │   ├── registry.py       # 工具注册中心
+# │   ├── decorators.py     # 工具装饰器
+# │   ├── security.py       # 权限控制
+# │   ├── validator.py      # 参数验证
+# │   ├── cache.py         # 缓存管理
+# │   ├── executor.py      # 执行引擎
+# │   └── exceptions.py    # 自定义异常
+# ├── utils/
+# │   ├── logger.py        # 日志记录
+# │   └── async_utils.py   # 异步工具
+# ├── plugins/             # 示例插件
+# │   ├── api_tools.py
+# │   ├── data_tools.py
+# │   └── service_tools.py
+# ├── tests/               # 单元测试
+# ├── docs/                # 文档
+# └── config.py            # 配置管理
+
+### 核心模块实现 ###
+
+
+

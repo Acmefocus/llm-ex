@@ -1,0 +1,17 @@
+{
+    "understanding": [
+        {
+            "input": "请解释量子计算的基本原理",
+            "expected": "量子计算利用量子叠加和纠缠...",
+            "difficulty": "hard",
+            "category": "science"
+        }
+    ],
+    "creativity": [
+        {
+            "input": "写一个关于火星殖民的科幻故事开头",
+            "criteria": ["原创性", "情节吸引力", "语言流畅度"],
+            "evaluator": "llm_based"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+// 使用React和ECharts
+import ReactECharts from 'echarts-for-react';
+
+function RadarChart({ data }) {
+    const option = {
+        radar: {
+            indicator: data.dimensions.map(d => ({ name: d }))
+        },
+        series: [{
+            data: [{
+                value: data.scores,
+                name: '模型表现'
+            }]
+        }]
+    };
+    return <ReactECharts option={option} />;
+}
